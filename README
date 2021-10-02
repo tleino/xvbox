@@ -1,3 +1,19 @@
 Tile X11 windows vertically in a box.
 
 Useful with https://github.com/tleino/mxswm
+
+Example
+=======
+
+# Start programs you want
+$ xclock &
+$ xbiff &
+$ xload &
+
+# Figure their IDs
+$ xwininfo -root -tree | grep xclock
+$ xwininfo -root -tree | grep xbiff
+$ xwininfo -root -tree | grep xload
+
+# Put them to xvbox
+$ xvbox 0x80000c 0x40000d 0x50000c
