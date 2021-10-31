@@ -97,7 +97,7 @@ create_vbox()
 	x = 0;
 	y = 0;
 	v = CWBackPixel;
-	a.background_pixel = 54554555;
+	a.background_pixel = BlackPixel(dpy, DefaultScreen(dpy));
 	vbox = XCreateWindow(dpy, DefaultRootWindow(dpy), x, y, w, h, 0,
 	    CopyFromParent, InputOutput, CopyFromParent, v, &a);
 	XStoreName(dpy, vbox, "vbox");
